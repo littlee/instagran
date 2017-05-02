@@ -1,0 +1,28 @@
+.container {
+  padding: 10px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+image {
+  width: 100%;
+}
+
+text {
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+}
+
+button text {
+  margin: 0;
+}
