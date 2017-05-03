@@ -2,7 +2,7 @@
   <image src="/assets/title.png" mode="widthFix"></image>
   <form bindsubmit="_submit">
     <input name="url" type="text" placeholder="Instagram URL ..."/>
-    <button form-type="submit" type="primary">
+    <button form-type="submit" type="primary" disabled="{{loading}}" loading="{{loading}}">
       <text wx:if="{{loading}}">获取中...</text>
       <text wx:else>获取图片</text>
     </button>

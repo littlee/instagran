@@ -24,5 +24,6 @@ text {
 }
 
 button text {
+  display: inline;
   margin: 0;
 }

@@ -1,3 +1,5 @@
+var HOST_NAME = 'http://139.199.78.119'
+
 var app = getApp()
 Page({
   data: {
@@ -13,7 +15,7 @@ Page({
       loading: true
     })
     wx.request({
-      url: 'http://192.168.0.101/api/getimg',
+      url: HOST_NAME + '/api/getimg',
       data: {
         url: e.detail.value.url
       },
