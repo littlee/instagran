@@ -33,5 +33,12 @@ Page({
     wx.previewImage({
       urls: [this.data.url]
     })
+  },
+
+  onShareAppMessage: function() {
+    return {
+      title: 'Instagran: download picture from Instagram',
+      path: 'pages/index/index'
+    }
   }
 })
