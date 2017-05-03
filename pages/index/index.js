@@ -25,6 +25,11 @@ Page({
           url: res.data.url,
           loading: false
         })
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败'
+        })
       }
     })
   },
