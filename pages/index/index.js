@@ -1,4 +1,4 @@
-var HOST_NAME = 'http://139.199.78.119'
+var HOST_NAME = 'https://www.littlee.xyz'
 
 var app = getApp()
 Page({
