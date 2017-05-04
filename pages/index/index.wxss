@@ -27,3 +27,15 @@ button text {
   display: inline;
   margin: 0;
 }
+
+.form-item {
+  display: block;
+  position: relative;
+}
+
+.clear-icon {
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+  right: 10px;
+}
