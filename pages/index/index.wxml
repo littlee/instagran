@@ -1,5 +1,6 @@
 <view class="container">
   <image src="/assets/title.png" mode="widthFix"></image>
+  
   <form bindsubmit="_submit">
     <view class="form-item">
       <input name="url" type="text" placeholder="Instagram URL ..." value="{{v}}"/>
@@ -11,11 +12,23 @@
     </button>
   </form>
 
-  <text wx:if="{{url}}">点击图片进入预览，长按可保存</text>
+  <text class="text-center" wx:if="{{url}}">点击图片进入预览，长按可保存</text>
 
   <image wx:if="{{url}}" src="{{url}}" mode="widthFix" bindtap="_tap"></image>
+  <image class="help" bindtap="_help" src="/assets/help.png" mode="widthFix"></image>
+  <view class="clearfix"></view>
 
-  <text>Following author:</text>
-  <text>Instagram: @littlee9090</text>
-  <text>GitHub: github.com/littlee</text>
+  <text class="text-center">Following the author:</text>
+  <text class="text-center">Instagram: @littlee9090</text>
+  <text class="text-center">GitHub: github.com/littlee</text>
+
+  <view class="pop">
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+
+    <text class="p">Whoo! Instagran has 100+ users now.</text>
+  </view>
+
+
 </view>

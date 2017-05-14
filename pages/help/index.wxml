@@ -1,0 +1,13 @@
+<view class="container">
+  <text class="h3 text-center">Help</text>
+  <text class="p">Input a link from Instagram to the text field, then hit the "获取图片" button, and give it some seconds to download the image. (For those who are inside G*W, it may take a little more)</text>
+  <text class="p">When the downloading is finished, click the image to preview, save it to gallery with a long tap.</text>
+  <text class="p">The development of Instagran was inspired by the idea from my friend. (@momorisz), it is open-sourced on GitHub: github.com/littlee/instagran. Issues and pull requestion are appreciated.</text>
+  <text class="p">By now, Instagran supports single image downloading only, but more features are coming, multiple images downloading, video downloading, etc.</text>
+
+  <view class="text-right">
+    <text>-- </text>
+    <image src="/assets/heart.png" class="emoji" mode="widthFix"></image>
+    <text>, @littlee9090</text>
+  </view>
+</view>

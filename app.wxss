@@ -1,0 +1,43 @@
+.h1 {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.h2 {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.h3 {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.p {
+  display: block;
+  margin-bottom: 10px;
+  text-indent: 2em;
+}
+
+.text-center {
+  display: block;
+  text-align: center;
+}
+
+.text-right {
+  display: block;
+  text-align: right;
+}
+
+.emoji {
+  width: 20px;
+}

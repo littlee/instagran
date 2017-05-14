@@ -9,13 +9,18 @@ Page({
     v: ''
   },
 
-  onLoad: function() {
+  onShow: function() {
     wx.getClipboardData({
       success: (res) => {
         console.log(res.data)
         if (res.data.indexOf('https://instagram.com/p/') !== -1) {
           this.setData({
             v: res.data
+          })
+
+          wx.showToast({
+            title: '成功粘贴剪切板的链接',
+            icon: 'success'
           })
         }
       }
@@ -58,6 +63,17 @@ Page({
   _clear: function () {
     this.setData({
       v: ''
+    })
+  },
+
+  _help: function() {
+    // wx.showModal({
+    //   title: '帮助',
+    //   content: '输入一个 Instagram 图片链接到输入框，然后点击“获取图片”按钮，即可下载图片到本页面。',
+    //   showCancel: false
+    // })
+    wx.navigateTo({
+      url: '/pages/help/index',
     })
   },
 

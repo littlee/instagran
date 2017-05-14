@@ -17,7 +17,7 @@ image {
   width: 100%;
 }
 
-text {
+.text-center {
   text-align: center;
   display: block;
   margin-bottom: 15px;
@@ -38,4 +38,31 @@ button text {
   z-index: 99;
   top: 10px;
   right: 10px;
+}
+
+.help {
+  float: right;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.pop {
+  text-align: center;
+  display: block;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5)
+}
+
+.pop-icon {
+  width: 30px;
+}
+.pop-icon + .pop-icon {
+  margin-left: 15px;
 }
