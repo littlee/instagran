@@ -41,3 +41,8 @@
 .emoji {
   width: 20px;
 }
+
+.center-block {
+  margin: auto;
+  display: block;
+}

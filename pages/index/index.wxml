@@ -18,16 +18,16 @@
   <image class="help" bindtap="_help" src="/assets/help.png" mode="widthFix"></image>
   <view class="clearfix"></view>
 
-  <text class="text-center">Following the author:</text>
-  <text class="text-center">Instagram: @littlee9090</text>
-  <text class="text-center">GitHub: github.com/littlee</text>
+  <text class="text-center index-info">Following the author:</text>
+  <text class="text-center index-info">Instagram: @littlee9090</text>
+  <text class="text-center index-info">GitHub: github.com/littlee</text>
 
   <view class="pop">
     <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
     <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
     <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
 
-    <text class="p">Whoo! Instagran has 100+ users now.</text>
+    <text class="text-center">Whoo! Instagran has 100+ users now.</text>
   </view>
 
 

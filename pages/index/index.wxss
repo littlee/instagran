@@ -20,7 +20,6 @@ image {
 .text-center {
   text-align: center;
   display: block;
-  margin-bottom: 15px;
 }
 
 button text {
@@ -54,10 +53,12 @@ button text {
 .pop {
   text-align: center;
   display: block;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   box-sizing: border-box;
   padding: 10px;
-  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5)
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+  position: relative;
+  border-radius: 5px;
 }
 
 .pop-icon {
@@ -65,4 +66,8 @@ button text {
 }
 .pop-icon + .pop-icon {
   margin-left: 15px;
+}
+
+.index-info {
+  margin-bottom: 10px;
 }
