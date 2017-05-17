@@ -1,5 +1,5 @@
 <view class="container">
-  <image src="/assets/title.png" mode="widthFix"></image>
+  <!-- <image src="/assets/title.png" mode="widthFix"></image>
   
   <form bindsubmit="_submit">
     <view class="form-item">
@@ -28,7 +28,7 @@
     <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
 
     <text class="text-center">Whoo! Instagran has 100+ users now.</text>
-  </view>
+  </view> -->
 
 
 </view>
