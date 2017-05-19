@@ -6,7 +6,25 @@ Page({
   data: {
     loading: false,
     url: null,
-    v: ''
+    v: '',
+    userCount: '-'
+  },
+
+  onLoad: function() {
+    wx.request({
+      url: HOST_NAME + '/info',
+      method: 'GET',
+      success: (res) => {
+        this.setData({
+          userCount: res.data.userCount
+        })
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败'
+        })
+      }
+    })
   },
 
   onShow: function() {
@@ -23,6 +41,14 @@ Page({
             icon: 'success'
           })
         }
+      },
+
+      fail: function() {
+        wx.showModal({
+          title: 'Oops',
+          content: '不支持自动粘贴功能，请手动输入链接',
+          showCancel: false
+        })
       }
     })
   },
@@ -31,6 +57,15 @@ Page({
     if (this.data.loading) {
       return
     }
+    if (!e.detail.value.url || e.detail.value.url.indexOf('https://instagram.com/p/') === -1) {
+      wx.showModal({
+        title: 'Oops',
+        content: '输入的链接不走心，请重新输入',
+        showCancel: false
+      })
+      return
+    }
+
     this.setData({
       loading: true
     })
@@ -67,11 +102,6 @@ Page({
   },
 
   _help: function() {
-    // wx.showModal({
-    //   title: '帮助',
-    //   content: '输入一个 Instagram 图片链接到输入框，然后点击“获取图片”按钮，即可下载图片到本页面。',
-    //   showCancel: false
-    // })
     wx.navigateTo({
       url: '/pages/help/index',
     })
