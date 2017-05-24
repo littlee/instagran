@@ -1,12 +1,28 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/help/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Instagran",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "text",
+        "iconPath": "/assets/joy_u.png",
+        "selectedIconPath": "/assets/joy.png"
+      },
+      {
+        "pagePath": "pages/help/index",
+        "text": "text",
+        "iconPath": "/assets/cool_u.png",
+        "selectedIconPath": "/assets/cool.png"
+      }
+    ]
   }
 }
