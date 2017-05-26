@@ -1,0 +1,34 @@
+<view class="container">
+  <image src="/assets/title.png" mode="widthFix"></image>
+  
+  <form bindsubmit="_submit">
+    <view class="form-item">
+      <input name="url" type="text" placeholder="Instagram URL ..." value="{{v}}"/>
+      <icon type="clear" class="clear-icon" bindtap="_clear"/>
+    </view>
+    <button form-type="submit" type="primary" disabled="{{loading}}" loading="{{loading}}">
+      <text wx:if="{{loading}}">获取中...</text>
+      <text wx:else>获取图片</text>
+    </button>
+  </form>
+
+  <text class="text-center" wx:if="{{url}}">点击图片进入预览，长按可保存</text>
+
+  <image wx:if="{{url}}" src="{{url}}" mode="widthFix" bindtap="_tap"></image>
+  <image class="help" bindtap="_help" src="/assets/help.png" mode="widthFix"></image>
+  <view class="clearfix"></view>
+
+  <text class="text-center index-info">Following the author:</text>
+  <text class="text-center index-info">Instagram: @littlee9090</text>
+  <text class="text-center index-info">GitHub: github.com/littlee</text>
+
+  <view class="pop">
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
+
+    <text class="text-center">WOW! Instagran has <text style="font-weight: bold; color: #F1C40F;">{{userCount}}</text> users now.</text>
+  </view>
+
+
+</view>

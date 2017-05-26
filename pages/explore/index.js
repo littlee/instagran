@@ -1,0 +1,116 @@
+// var HOST_NAME = 'https://www.littlee.xyz'
+var HOST_NAME = 'https://48156786.qcloud.la'
+
+var app = getApp()
+Page({
+  data: {
+    loading: false,
+    url: null,
+    v: '',
+    userCount: '-'
+  },
+
+  onLoad: function() {
+    wx.request({
+      url: HOST_NAME + '/info',
+      method: 'GET',
+      success: (res) => {
+        this.setData({
+          userCount: res.data.userCount
+        })
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败'
+        })
+      }
+    })
+  },
+
+  onShow: function() {
+    wx.getClipboardData({
+      success: (res) => {
+        console.log(res.data)
+        if (res.data.indexOf('https://instagram.com/p/') !== -1) {
+          this.setData({
+            v: res.data
+          })
+
+          wx.showToast({
+            title: '成功粘贴剪切板的链接',
+            icon: 'success'
+          })
+        }
+      },
+
+      fail: function() {
+        wx.showModal({
+          title: 'Oops',
+          content: '不支持自动粘贴功能，请手动输入链接',
+          showCancel: false
+        })
+      }
+    })
+  },
+
+  _submit: function (e) {
+    if (this.data.loading) {
+      return
+    }
+    if (!e.detail.value.url || e.detail.value.url.indexOf('https://instagram.com/p/') === -1) {
+      wx.showModal({
+        title: 'Oops',
+        content: '输入的链接不走心，请重新输入',
+        showCancel: false
+      })
+      return
+    }
+
+    this.setData({
+      loading: true
+    })
+    wx.request({
+      url: HOST_NAME + '/api/getimg',
+      data: {
+        url: e.detail.value.url
+      },
+      method: 'POST',
+      success: (res) => {
+        this.setData({
+          url: res.data.url,
+          loading: false
+        })
+      },
+      fail: () => {
+        wx.showToast({
+          title: '请求失败'
+        })
+      }
+    })
+  },
+
+  _tap: function (e) {
+    wx.previewImage({
+      urls: [this.data.url]
+    })
+  },
+
+  _clear: function () {
+    this.setData({
+      v: ''
+    })
+  },
+
+  _help: function() {
+    wx.navigateTo({
+      url: '/pages/help/index',
+    })
+  },
+
+  onShareAppMessage: function() {
+    return {
+      title: 'Instagran: download picture from Instagram',
+      path: 'pages/index/index'
+    }
+  }
+})

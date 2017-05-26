@@ -1,0 +1,73 @@
+.container {
+  padding: 10px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+image {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+  display: block;
+}
+
+button text {
+  display: inline;
+  margin: 0;
+}
+
+.form-item {
+  display: block;
+  position: relative;
+}
+
+.clear-icon {
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+  right: 10px;
+}
+
+.help {
+  float: right;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.pop {
+  text-align: center;
+  display: block;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
+  position: relative;
+  border-radius: 5px;
+}
+
+.pop-icon {
+  width: 30px;
+}
+.pop-icon + .pop-icon {
+  margin-left: 15px;
+}
+
+.index-info {
+  margin-bottom: 10px;
+}
