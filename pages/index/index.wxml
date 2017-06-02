@@ -1,5 +1,5 @@
 <view class="container">
-  <image src="/assets/title.png" mode="widthFix"></image>
+  <image src="/assets/title_new.png" mode="widthFix" bindload="_imgLoad"></image>
   
   <form bindsubmit="_submit">
     <view class="form-item">
@@ -12,9 +12,12 @@
     </button>
   </form>
 
-  <text class="text-center" wx:if="{{url}}">点击图片进入预览，长按可保存</text>
-
   <image wx:if="{{url}}" src="{{url}}" mode="widthFix" bindtap="_tap"></image>
+  <button wx:if="{{url}}" bindtap="_saveImg" loading="{{saving}}" disabled="{{saving}}">
+    <text wx:if="{{saving}}">请稍等...</text>
+    <text wx:else>保存到相册</text>
+  </button>
+
   <image class="help" bindtap="_help" src="/assets/help.png" mode="widthFix"></image>
   <view class="clearfix"></view>
 
@@ -22,13 +25,8 @@
   <text class="text-center index-info">Instagram: @littlee9090</text>
   <text class="text-center index-info">GitHub: github.com/littlee</text>
 
-  <view class="pop">
-    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
-    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
-    <image class="pop-icon" src="/assets/pop.png" mode="widthFix"></image>
-
-    <text class="text-center">WOW! Instagran has <text style="font-weight: bold; color: #F1C40F;">{{userCount}}</text> users now.</text>
+  <view class="pop" wx:if="{{noti}}">
+    <image src="/assets/moon.png" mode="widthFix" class="pop-emoji"></image>
+    <text>{{noti}}</text>
   </view>
-
-
 </view>

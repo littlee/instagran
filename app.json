@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/explore/index",
     "pages/index/index",
+    "pages/explore/index",
     "pages/help/index"
   ],
   "window": {

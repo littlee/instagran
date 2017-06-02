@@ -5,9 +5,11 @@ var app = getApp()
 Page({
   data: {
     loading: false,
-    url: null,
+    url: '',
     v: '',
-    userCount: '-'
+    userCount: '-',
+    noti: '新功能：保存到相册已上线！',
+    saving: false
   },
 
   onLoad: function() {
@@ -16,7 +18,8 @@ Page({
       method: 'GET',
       success: (res) => {
         this.setData({
-          userCount: res.data.userCount
+          userCount: res.data.userCount,
+          noti: res.data.noti
         })
       },
       fail: () => {
@@ -92,6 +95,42 @@ Page({
   _tap: function (e) {
     wx.previewImage({
       urls: [this.data.url]
+    })
+  },
+
+  _imgLoad: function(e) {
+    // console.log(e)
+  },
+
+  _saveImg: function() {
+    this.setData({
+      saving: true
+    })
+    wx.downloadFile({
+      url: this.data.url,
+      success: (res) => {
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success: () => {
+            wx.showToast({
+              title: '保存成功',
+            })
+            this.setData({
+              saving: false
+            })
+          }
+        })
+      },
+      fail: () => {
+        wx.showModal({
+          showCancel: false,
+          title: 'Oops',
+          content: '下载图片失败',
+        })
+        this.setData({
+          saving: false
+        })
+      }
     })
   },
 

@@ -1,5 +1,6 @@
 .container {
   padding: 10px;
+  /*background-color: #fdfdfd;*/
 }
 
 input {
@@ -53,20 +54,27 @@ button text {
 .pop {
   text-align: center;
   display: block;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px 10px;
   box-shadow: 0 10px 10px -10px rgba(0,0,0,0.5);
   position: relative;
   border-radius: 5px;
 }
 
-.pop-icon {
-  width: 30px;
+.pop-emoji {
+  display: inline-block;
+  width: 20px;
+  vertical-align: text-bottom;
+  margin: 0 5px;
 }
-.pop-icon + .pop-icon {
-  margin-left: 15px;
+
+.pop text {
+  /*color: #F39C12;*/
+  color: #888;
+  display: inline-block;
 }
+
 
 .index-info {
   margin-bottom: 10px;
