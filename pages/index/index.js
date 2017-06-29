@@ -1,5 +1,4 @@
-// var HOST_NAME = 'https://www.littlee.xyz'
-var HOST_NAME = 'https://48156786.qcloud.la'
+var HOST_NAME = 'https://www.littlee.xyz'
 
 var app = getApp()
 Page({
@@ -8,7 +7,7 @@ Page({
     url: '',
     v: '',
     userCount: '-',
-    noti: '新功能：保存到相册已上线！',
+    noti: '',
     saving: false
   },
 
