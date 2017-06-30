@@ -1,6 +1,10 @@
 // var HOST_NAME = 'https://www.littlee.xyz'
 var HOST_NAME = 'https://48156786.qcloud.la'
 
+function isValidURL(url) {
+  return /^https:\/\/(www.)?instagram.com\/p\//.test(url)
+}
+
 var app = getApp()
 Page({
   data: {
@@ -8,7 +12,7 @@ Page({
     url: '',
     v: '',
     userCount: '-',
-    noti: '新功能：保存到相册已上线！',
+    noti: '哈哈哈',
     saving: false
   },
 
@@ -34,7 +38,7 @@ Page({
     wx.getClipboardData({
       success: (res) => {
         console.log(res.data)
-        if (res.data.indexOf('https://instagram.com/p/') !== -1) {
+        if (isValidURL(res.data)) {
           this.setData({
             v: res.data
           })
@@ -60,7 +64,7 @@ Page({
     if (this.data.loading) {
       return
     }
-    if (!e.detail.value.url || e.detail.value.url.indexOf('https://instagram.com/p/') === -1) {
+    if (!e.detail.value.url || !isValidURL(e.detail.value.url)) {
       wx.showModal({
         title: 'Oops',
         content: '输入的链接不走心，请重新输入',
