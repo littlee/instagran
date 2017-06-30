@@ -1,5 +1,6 @@
-// var HOST_NAME = 'https://www.littlee.xyz'
-var HOST_NAME = 'https://48156786.qcloud.la'
+/* global wx getApp Page */
+
+var HOST_NAME = 'https://www.littlee.xyz'
 
 function isValidURL(url) {
   return /^https:\/\/(www.)?instagram.com\/p\//.test(url)
@@ -12,7 +13,7 @@ Page({
     url: '',
     v: '',
     userCount: '-',
-    noti: '哈哈哈',
+    noti: '',
     saving: false
   },
 

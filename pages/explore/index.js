@@ -1,5 +1,4 @@
 var HOST_NAME = 'https://www.littlee.xyz'
-// var HOST_NAME = 'https://48156786.qcloud.la'
 
 var app = getApp()
 Page({

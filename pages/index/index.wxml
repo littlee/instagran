@@ -26,7 +26,6 @@
   <text class="text-center index-info">GitHub: github.com/littlee</text>
 
   <view class="pop" wx:if="{{noti}}">
-    <image src="/assets/moon.png" mode="widthFix" class="pop-emoji"></image>
     <text>{{noti}}</text>
   </view>
 </view>
